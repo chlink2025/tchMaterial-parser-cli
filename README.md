@@ -95,5 +95,5 @@ Access Token 通常具有 7 天左右的有效期。如果下载失败，请按�
 ## ⚖️ 许可证与版权信息
 
 - 本工具的原始版本由 [happycola233](https://github.com/happycola233/tchMaterial-parser) 开发。
-- 本修改版（CLI/Termux 版）由[chlink2025] 进行重构与维护。
+- 本修改版（CLI/Termux 版）由[chlink2025](https://github.com/chlink2025/tchMaterial-parser-cli)进行重构与维护。
 - 全体代码遵循 **MIT License** 协议开源。
