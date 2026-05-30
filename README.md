@@ -1,4 +1,4 @@
-# [国家中小学智慧教育平台 电子课本](https://www.google.com/search?q=https://basic.smartedu.cn/tchMaterial/) 下载工具 (Termux / CLI 版)
+# [国家中小学智慧教育平台 电子课本](https://basic.smartedu.cn/tchMaterial/) 下载工具 (Termux / CLI 版)
 
 本工具是 [tchMaterial-parser](https://github.com/happycola233/tchMaterial-parser) 的命令行重构版，专门优化了对 **Termux (Android)** 和 **Linux** 环境的支持。通过简单的命令行操作，即可批量下载国家中小学智慧教育平台的 PDF 课本。
 
@@ -35,7 +35,7 @@ pip install requests pypdf
 
 ### 1\. 设置 Access Token (必选)
 
-为了访问私有资源并获取高清 PDF，你需要设置 Access Token。获取方法详见[原项目说明](https://www.google.com/search?q=https://github.com/happycola233/tchMaterial-parser%232--%E8%AE%BE%E7%BD%AE-access-token%E5%8F%AF%E9%80%89)。
+为了访问私有资源并获取高清 PDF，你需要设置 Access Token。获取方法详见[原项目说明](https://github.com/happycola233/tchMaterial-parser#2--%E8%AE%BE%E7%BD%AE-access-token%E5%8F%AF%E9%80%89)。
 
 ```bash
 python tch_cli.py -t "你的_Access_Token"
@@ -79,7 +79,7 @@ python tch_cli.py -f list.txt -d ./my_books
 
 ### 2\. 为什么提示 Access Token 过期？
 
-Access Token 通常具有 7 天左右的有效期。如果下载失败，请按照[获取教程](https://www.google.com/search?q=https://github.com/happycola233/tchMaterial-parser%232--%E8%AE%BE%E7%BD%AE-access-token%E5%8F%AF%E9%80%89)重新获取并使用 `-t` 重新设置。
+Access Token 通常具有 7 天左右的有效期。如果下载失败，请按照[获取教程](https://github.com/happycola233/tchMaterial-parser%232--%E8%AE%BE%E7%BD%AE-access-token%E5%8F%AF%E9%80%89)重新获取并使用 `-t` 重新设置。
 
 ### 3\. 配置文件保存在哪？
 
