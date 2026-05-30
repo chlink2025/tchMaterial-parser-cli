@@ -246,7 +246,7 @@ def main():
     parser.add_argument("-u", "--url", help="要下载的资源网址")
     parser.add_argument("-f", "--file", help="包含多个资源网址的文本文件 (每行一个 URL)")
     parser.add_argument("-d", "--dir", default=".", help="下载保存的目录路径 (默认为当前目录)")
-    parser.add_argument("--no-bookmarks", action="store_true", help="禁用书签添加功能")
+    parser.add_argument("--bookmarks", action="store_true", help="启用书签添加功能")
 
     args = parser.parse_args()
 
@@ -280,7 +280,7 @@ def main():
     # 循环解析并下载
     for url in urls:
         print(f"\n[-] 正在解析链接: {url}")
-        resource_url, title, chapters = parse(url, not args.no_bookmarks)
+        resource_url, title, chapters = parse(url, args.bookmarks)
         
         if not resource_url:
             print("[!] 解析失败。请检查链接是否正确，或验证您的 Access Token 是否有效。")
@@ -291,7 +291,7 @@ def main():
         filename = re.sub(r'[\\/*?:"<>|]', "_", filename) 
         save_path = os.path.join(args.dir, f"{filename}.pdf")
 
-        download_file(resource_url, save_path, chapters if not args.no_bookmarks else None)
+        download_file(resource_url, save_path, chapters if args.bookmarks else None)
 
 if __name__ == "__main__":
     try:
